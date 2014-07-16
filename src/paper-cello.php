@@ -7,6 +7,12 @@
 
 namespace pc;
 
+/**
+ * Get the current UTC datetime in
+ * YYYY-MM-DD HH:MM:SS format.
+ *
+ * @return string current UTC datetime
+ */
 function datetime_now() {
     date_default_timezone_set('UTC');
     return date('Y-m-d H:i:s');
