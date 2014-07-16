@@ -18,8 +18,23 @@ function datetime_now() {
     return date('Y-m-d H:i:s');
 }
 
+/**
+ * Convert a UTC datetime string to a
+ * timezone and date format.
+ *
+ * @param string $datetime a UTC datetime.
+ *     The format can be any format that
+ *     strtotime() accepts.
+ * @param string $timezone a valid PHP timezone
+ *     identifier.
+ * @param string $format the date and time
+ *     format to use for the returned datetime
+ *     string. The format can be any format
+ *     that the PHP date() function accepts.
+ * @return string the converted datetime
+ */
 function datetime_to($datetime, $timezone, $format) {
-    $date = new DateTime($datetime, new DateTimeZone('UTC')); 
+    $date = new \DateTime($datetime, new \DateTimeZone('UTC')); 
     date_default_timezone_set($timezone); 
     return date($format, $date->format('U'));
 }
