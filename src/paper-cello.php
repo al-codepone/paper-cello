@@ -39,14 +39,24 @@ function datetime_to($datetime, $timezone, $format) {
     return date($format, $date->format('U'));
 }
 
+/**
+ * Get a blowfish hash. This function uses
+ * the PHP crypt() function internally.
+ *
+ * @param string $input the string to be hashed.
+ * @param string $salt either an integer cost
+ *     value or a previously obtained bcrypt_hash().
+ *     The cost value must be between 4-31 inclusive.
+ * @return string blowfish hash
+ */
 function bcrypt_hash($input, $salt) {
     if(is_int($salt)) {
         $chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ./';
-        $numChars = strlen($chars);
+        $num_chars = strlen($chars);
         $salt = sprintf('$2a$%02d$', $salt);
 
         for($i = 0; $i < 22; ++$i) {
-            $salt .= $chars[mt_rand(0, $numChars - 1)];
+            $salt .= $chars[mt_rand(0, $num_chars - 1)];
         }
     }
 
