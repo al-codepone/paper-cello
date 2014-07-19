@@ -75,10 +75,23 @@ function clamp($value, $min, $max) {
     return min(max($value, $min), $max);
 }
 
-function paginate($numItems, $itemsPerPage, $currentPageNum) {
-    $numPages = max(1, ceil($numItems/$itemsPerPage));
-    $currentPageNum = clamp($currentPageNum, 1, $numPages);
-    return array($numPages, $currentPageNum);
+/**
+ * Compute pagination values.
+ *
+ * @param int $num_items the total number of items
+ *     to paginate.
+ * @param int $items_per_page the number of items per
+ *     page.
+ * @param int $current_page_num the raw current page
+ *     number. This value will be normalized.
+ * @return array an array with two elements: the total
+ *     number of pages and the normalized current page
+ *     number.
+ */
+function paginate($num_items, $items_per_page, $current_page_num) {
+    $num_pages = max(1, ceil($num_items/$items_per_page));
+    $current_page_num = clamp($current_page_num, 1, $num_pages);
+    return array($num_pages, $current_page_num);
 }
 
 function route(array $array, $key = false) {
