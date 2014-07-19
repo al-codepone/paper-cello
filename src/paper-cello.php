@@ -63,6 +63,14 @@ function bcrypt_hash($input, $salt) {
     return crypt($input, $salt);
 }
 
+/**
+ * Clamp a value to a range.
+ *
+ * @param mixed $value the value to clamp
+ * @param mixed $min the minimum allowed value
+ * @param mixed $max the maximum allowed value
+ * @return mixed the clamped value
+ */
 function clamp($value, $min, $max) {
     return min(max($value, $min), $max);
 }
