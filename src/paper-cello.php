@@ -99,6 +99,11 @@ function route(array $array, $key = false) {
     return $array[$key];
 }
 
+/**
+ * Get a random sha1 hash.
+ *
+ * @return string random sha1 hash
+ */
 function sha1_token() {
     return sha1(uniqid(mt_rand(), true));
 }
