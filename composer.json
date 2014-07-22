@@ -1,0 +1,23 @@
+{
+    "name": "paper-cello/paper-cello",
+    "description": "PHP miscellaneous functions",
+    "keywords": ["datetime", "bcrypt", "hash", "clamp", "paginate", "router", "sha1", "token"],
+    "homepage": "https://github.com/al-codepone/paper-cello",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ry Ferguson",
+            "role": "Developer",
+            "email": "rytf12@gmail.com",
+            "homepage": "http://ikitovagn.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "files": [
+            "src/paper-cello.php"
+        ]
+    }
+}
