@@ -61,6 +61,25 @@ echo pc\datetime_to($utc_now, 'America/Los_Angeles', 'M j, Y g:ia');
 //Jul 23, 2014 9:33pm
 ```
 
+## bcrypt_hash()
+
+Use `bcrypt_hash()` to hash passwords.
+Use either a cost value from 4-31:
+
+```php
+$hash = pc\bcrypt_hash('password', 12);
+
+//$2a$12$DMWzyZ.iU444JC/.270Bqe84eIwqHOD7ct4jkHY/0gaNv98fHNGx.
+```
+
+Or use a previously obtained hash:
+
+```php
+echo pc\bcrypt_hash('password', $hash);
+
+//$2a$12$DMWzyZ.iU444JC/.270Bqe84eIwqHOD7ct4jkHY/0gaNv98fHNGx.
+```
+
 ## LICENSE
 
 MIT <http://ryf.mit-license.org/>
