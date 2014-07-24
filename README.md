@@ -41,6 +41,26 @@ or you can install manually:
 require 'paper-cello.php';
 ```
 
+## datetime_now() and datetime_to()
+
+Use `datetime_now()` and `datetime_to()` to handle datetimes.
+These functions handle time zones and daylight saving time correctly
+without having to use any other time settings.
+
+Get the current UTC datetime with `datetime_now()`:
+
+```php
+$utc_now = pc\datetime_now(); //2014-07-24 04:33:12
+```
+
+Use `datetime_to()` to convert a UTC datetime to a time zone and format:
+
+```php
+echo pc\datetime_to($utc_now, 'America/Los_Angeles', 'M j, Y g:ia');
+
+//Jul 23, 2014 9:33pm
+```
+
 ## LICENSE
 
 MIT <http://ryf.mit-license.org/>
