@@ -82,6 +82,23 @@ echo pc\bcrypt_hash('password', $hash);
 //$2a$12$DMWzyZ.iU444JC/.270Bqe84eIwqHOD7ct4jkHY/0gaNv98fHNGx.
 ```
 
+## clamp()
+
+Clamp a value to a range:
+
+```php
+echo implode(', ', array(
+    pc\clamp(5, 1, 10),
+    pc\clamp(0, 1, 10),
+    pc\clamp(11, 1, 10),
+    pc\clamp(11, 1, 10.4),
+    pc\clamp('d', 'c', 'f'),
+    pc\clamp('a', 'c', 'f'),
+    pc\clamp('i', 'c', 'f')));
+
+//5, 1, 10, 10.4, d, c, f
+```
+
 ## LICENSE
 
 MIT <http://ryf.mit-license.org/>
