@@ -1,6 +1,8 @@
 # Paper Cello
 
 Paper Cello is a library of miscellaneous PHP functions.
+There are functions for datetimes, bcrypt hashing, clamping,
+pagination, routing and SHA1 token generation.
 The first release is still in development.
 This readme is unfinished.
 
