@@ -99,6 +99,28 @@ echo implode(', ', array(
 //5, 1, 10, 10.4, d, c, f
 ```
 
+## paginate()
+
+Compute total number of pages and current page number
+given number of items, items per page and raw current page number:
+
+```php
+$num_items = 24;
+$items_per_page = 5;
+$raw_current_page_num = 2;
+
+var_dump(pc\paginate(
+    $num_items,
+    $items_per_page,
+    $raw_current_page_num));
+
+/*
+array
+  0 => int 5
+  1 => int 2
+*/
+```
+
 ## LICENSE
 
 MIT <http://ryf.mit-license.org/>

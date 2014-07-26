@@ -89,7 +89,7 @@ function clamp($value, $min, $max) {
  *     number.
  */
 function paginate($num_items, $items_per_page, $current_page_num) {
-    $num_pages = max(1, ceil($num_items/$items_per_page));
+    $num_pages = (int)max(1, ceil($num_items/$items_per_page));
     $current_page_num = clamp($current_page_num, 1, $num_pages);
     return array($num_pages, $current_page_num);
 }
