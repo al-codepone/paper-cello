@@ -121,6 +121,14 @@ array
 */
 ```
 
+## sha1_token()
+
+Get a random token:
+
+```php
+echo pc\sha1_token(); //003046aec403e654eaadad31658bcad04ad7f95c
+```
+
 ## LICENSE
 
 MIT <http://ryf.mit-license.org/>
