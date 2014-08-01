@@ -94,6 +94,21 @@ function paginate($num_items, $items_per_page, $current_page_num) {
     return array($num_pages, $current_page_num);
 }
 
+/**
+ * Get an array value using an array key.
+ * The default key is $_GET['r']. This
+ * function is intended to be used as a
+ * router. The array values should be PHP
+ * scripts. Include the script that this
+ * function returns.
+ *
+ * @param array $array an array of values.
+ *     The values should be PHP scripts.
+ * @param mixed $key the key to use to get
+ *     the array value.
+ * @return mixed one of the values in the
+ *     array.
+ */
 function route(array $array, $key = false) {
     $key = ($key === false) ? $_GET['r'] : $key;
     return $array[$key];
