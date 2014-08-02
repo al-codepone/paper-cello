@@ -121,6 +121,54 @@ array
 */
 ```
 
+## route()
+
+Use `route()` to include one of many PHP scripts based on a value.
+These examples use `echo`; use `require` in your application.
+
+Route on the default `$_GET['r']`:
+
+```php
+echo pc\route(array(
+    null => 'home.php',
+    'contact' => 'contact.php'));
+
+//home.php
+```
+
+Use a base directory:
+
+```php
+echo 'my/route/' . pc\route(array(
+    null => 'home.php',
+    'contact' => 'contact.php'));
+
+//my/route/home.php
+```
+
+Route on a POST value:
+
+```php
+echo pc\route(array(
+    null => 'one.php',
+    'two' => 'two.php'),
+    $_POST['r']);
+
+//one.php
+```
+
+Route on a value for testing:
+
+```php
+echo pc\route(array(
+    null => 'home.php',
+    'chess' => 'chess.php',
+    'golf' => 'golf.php'),
+    'golf');
+
+//golf.php
+```
+
 ## sha1_token()
 
 Get a random token:
