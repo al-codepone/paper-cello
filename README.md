@@ -147,9 +147,10 @@ echo 'my/route/' . pc\route(array(
 Route on a POST value:
 
 ```php
-echo pc\route(array(
-    null => 'one.php',
-    'two' => 'two.php'),
+echo pc\route(
+    array(
+        null => 'one.php',
+        'two' => 'two.php'),
     $_POST['r']);
 
 //one.php
@@ -158,10 +159,11 @@ echo pc\route(array(
 Route on a value for testing:
 
 ```php
-echo pc\route(array(
-    null => 'home.php',
-    'chess' => 'chess.php',
-    'golf' => 'golf.php'),
+echo pc\route(
+    array(
+        null => 'home.php',
+        'chess' => 'chess.php',
+        'golf' => 'golf.php'),
     'golf');
 
 //golf.php
@@ -172,10 +174,11 @@ specify keys in the array. For example the
 below is equivalent to the above:
 
 ```php
-echo pc\route(array(
-    null => 'home.php',
-    'chess.php',
-    'golf.php'),
+echo pc\route(
+    array(
+        null => 'home.php',
+        'chess.php',
+        'golf.php'),
     'golf');
 
 //golf.php
