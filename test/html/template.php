@@ -12,6 +12,6 @@
             <li><a href="./route.php?r=sports">Sports</a></li>
             <li><a href="./route.php?r=about">About Me</a></li>
         </ul></div>
-        <div><?=$content?></div>
+        <div><?=$t_content?></div>
     </body>
 </html>

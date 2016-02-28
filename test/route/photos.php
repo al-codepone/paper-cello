@@ -1,3 +1,3 @@
 <?php
 
-$content = "insert photo here.";
+$t_content = "insert photo here.";

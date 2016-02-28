@@ -1,3 +1,3 @@
 <?php
 
-$content = "I like fishing and tennis.";
+$t_content = "I like fishing and tennis.";

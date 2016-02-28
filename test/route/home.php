@@ -1,3 +1,3 @@
 <?php
 
-$content = "I'm John, welcome to my site.";
+$t_content = "I'm John, welcome to my site.";
