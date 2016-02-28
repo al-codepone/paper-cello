@@ -99,7 +99,10 @@ function paginate($num_items, $items_per_page, $current_page_num) {
  * The default key is $_GET['r']. This
  * function is intended to be used as a
  * router. The array values should be PHP
- * scripts. Include the script that this
+ * scripts. If a key of the passed array
+ * is an integer then that key is set to
+ * the respective array value without the file
+ * extension. include() the script that this
  * function returns.
  *
  * @param array $array an array of values.
@@ -110,8 +113,18 @@ function paginate($num_items, $items_per_page, $current_page_num) {
  *     array.
  */
 function route(array $array, $key = false) {
+    $new_array = array();
+
+    foreach($array as $i => $v) {
+        $new_key = is_int($i)
+            ? substr($v, 0, strpos($v, '.'))
+            : $i;
+            
+        $new_array[$new_key] = $v;
+    }
+
     $key = ($key === false) ? $_GET['r'] : $key;
-    return $array[$key];
+    return $new_array[$key];
 }
 
 /**
