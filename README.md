@@ -30,7 +30,7 @@ Install using composer:
 ```javascript
 {
     "require": {
-        "paper-cello/paper-cello": "0.5.0",
+        "paper-cello/paper-cello": "0.6.0",
     }
 }
 ```
