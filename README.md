@@ -167,6 +167,20 @@ echo pc\route(array(
 //golf.php
 ```
 
+There is a shortcut so you don't have to
+specify keys in the array. For example the
+below is equivalent to the above:
+
+```php
+echo pc\route(array(
+    null => 'home.php',
+    'chess.php',
+    'golf.php'),
+    'golf');
+
+//golf.php
+```
+
 ## sha1_token()
 
 Get a random token:
